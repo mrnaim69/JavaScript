@@ -1939,7 +1939,8 @@ myCar.startCar();
 
 ```
 
-###Inheritance
+
+### Inheritance
 
 Inheritance is the mechanism by which one class can inherit
 properties and methods from another class. This allows for code
