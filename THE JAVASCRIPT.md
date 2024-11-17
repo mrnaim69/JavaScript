@@ -12,13 +12,9 @@ accountEmail = "naim@hc.com";
 accountPassword = "21212121";
 accountCity = "Bengaluru";
 console.log(accountId);
+//Prefer not to use var because of issues in block scope and functional scope.
 
-// Prefer not to use var because of
-// issues in block scope and 
-// functional scope.
-
-console.table([accountId,
-accountEmail, accountPassword,
+console.table([accountId, accountEmail, accountPassword,
 accountCity, accountState]);
 ```
 ### DataType
@@ -27,7 +23,7 @@ accountCity, accountState]);
 
 
 "use strict";
-// Treat all JS code as newer version
+Treat all JS code as newer version
 alert(3 + 3)
 
 // We are using Node.js, not a browser
@@ -150,8 +146,7 @@ console.log("2" === 2);
 
 const name = "naim rahman";
 const repoCount = 50;
-console.log(`Hello my name is
-${name} and my repo count is
+console.log(`Hello my name is ${name} and my repo count is
 ${repoCount}`);
 const gameName = new String('naim-rahman-com');
 console.log(gameName[0]);
@@ -203,15 +198,13 @@ console.log(Math.floor(Math.random() * 10) + 1);
 const min = 10;
 
 const max = 20;
-console.log(Math.floor(Math.random
-() * (max - min + 1)) + min);
+console.log(Math.floor(Math.random() * (max - min + 1)) + min);
 ```
 ### DataType Summary
 _**Primitive**_
 
 ```javascript
-//7 types: String, Number,
-// Boolean, null, undefined, Symbol, BigInt
+//7 types: String, Number, Boolean, null, undefined, Symbol, BigInt
 const score = 100;
 const scoreValue = 100.3;
 const isLoggedIn = false;
@@ -219,8 +212,7 @@ const outsideTemp = null;
 let userEmail;
 const id = Symbol('123');
 const anotherId = Symbol('123');
-console.log(id === anotherId);
-//false because Symbols are unique
+console.log(id === anotherId); false because Symbols are unique
 const bigNumber = 3456543576654356754n
 
 //BigInt example
@@ -256,9 +248,9 @@ const myArr2 = new Array(1, 2, 3, 4);
 console.log(myArr[1]);
 “Array methods”
 myArr.push(6);
-// Adds 6 to the end of the array
+Adds 6 to the end of the array
 myArr.push(7);
-// Adds 7 to the end of the array
+Adds 7 to the end of the array
 myArr.pop();
 //Removes the last element from the array
 
@@ -275,8 +267,7 @@ console.log(myArr.indexOf(3));
 // Finds the index of element 3
 
 const newArr = myArr.join();
-// Joins all array elements into Array 
-// string with a comma by default
+// Joins all array elements into a string with a comma by default
 
 console.log(myArr);
 console.log(newArr);
@@ -285,68 +276,51 @@ console.log(newArr);
 
 console.log("A ", myArr);
 const myn1 = myArr.slice(1, 3);
-// Returns a shallow copy of a 
-// portion of the array, from 
-// index 1 to 3 (excluding index 3)
+// Returns a shallow copy of a portion of the array, from index 1 to 3 (excluding index 3)
 
 console.log(myn1);
 console.log("B ", myArr);
 const myn2 = myArr.splice(1, 3); 
 
-// Modifies the original array by 
-// removing 3 elements starting from index 1
+// Modifies the original array by removing 3 elements starting from index 1
 
 console.log("C ", myArr);
 console.log(myn2);
-const marvel_heros = 
-["thor", "Ironman", "spiderman"];
-const dc_heros = 
-["superman", "flash", "batman"];
-
+const marvel_heros = ["thor", "Ironman", "spiderman"];
+const dc_heros = ["superman", "flash", "batman"];
 marvel_heros.push(dc_heros); 
 
-// Uncommenting this would add 
-// dc_heros array as a single 
-// element inside marvel_heros
+// Uncommenting this would add dc_heros array as a single element inside marvel_heros
 
 console.log(marvel_heros);
 
 console.log(marvel_heros[3][1]);
-// This would give 'f' from the
-// 'flash' in dc_heros
+// This would give 'f' from the 'flash' in dc_heros
 
 const allHeros = marvel_heros.concat(dc_heros); 
 // Merges both arrays
 
 console.log(allHeros);
-const all_new_heros = 
-[...marvel_heros, ...dc_heros];
-// Using spread operator to merge
-// arrays
+const all_new_heros = [...marvel_heros, ...dc_heros];
+// Using spread operator to merge arrays
 console.log(all_new_heros);
-const another_array = [1, 2, 3, 
-[4, 5, 6], 7, [6, 7, [4, 5]]];
+const another_array = [1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]];
 
 // Nested array
 
-const real_another_array = 
-another_array.flat(Infinity);
-// Flattens all levels of the
-// nested array
+const real_another_array = another_array.flat(Infinity);
+// Flattens all levels of the nested array
 
 console.log(real_another_array);
 console.log(Array.isArray("Hitesh"));
 
-// Checks if "Hitesh" is an array,
-// will return false
+// Checks if "Hitesh" is an array, will return false
 
 console.log(Array.from("Hitesh")); 
-// Converts string into an array
-// of characters
+// Converts string into an array of characters
 console.log(Array.from({name: "hitesh"}));
 
-// Converts object to an array 
-// (array of keys in this case)
+// Converts object to an array (array of keys in this case)
 let score1 = 100;
 let score2 = 200;
 let score3 = 300;
@@ -402,7 +376,7 @@ tinderUser.id = "123abc"
 tinderUser.name = "Sammy"
 tinderUser.isLoggedIn = false
 console.log(tinderUser);
-// Accessing Nested Object Properties
+“Accessing Nested Object Properties”
 const regularUser = {
 email: "some@gmail.com",
 fullname: {
@@ -412,34 +386,29 @@ lastname: "choudhary"
 }
 }
 }
-console.log(regularUser.fullname.
-serfullname.firstname);
+console.log(regularUser.fullname.userfullname.firstname);
+“Merging Objects”
 
-// “Merging Objects”
-
-const obj1 = {1: "a", 2: "b"}
+ const obj1 = {1: "a", 2: "b"}
 const obj2 = {3: "a", 4: "b"}
 const obj4 = {5: "a", 6: "b"}
 Merging using the spread operator
 const obj3 = {...obj1, ...obj2}
 console.log(obj3);
-
-// Working with Arrays of Objects
+Working with Arrays of Objects
 const users = [
 { id: 1, email: "h@gmail.com" },
 { id: 2, email: "h@gmail.com" },
 { id: 3, email: "h@gmail.com" },
 ]
 console.log(users[1].email);
-// Object Methods and Property Checking
+“Object Methods and Property Checking”
 console.log(Object.keys(tinderUser));
 console.log(Object.values(tinderUser));
 console.log(Object.entries(tinderUser));
+“Property Existence Check”
 
-// Property Existence Check
-
-console.log(tinderUser.hasOwnPrope
-rty('isLoggedIn'));
+console.log(tinderUser.hasOwnProperty('isLoggedIn'));
 
 ```
 
@@ -453,22 +422,17 @@ courseInstructor: "hitesh"
 }
 
 
-// Destructuring the course object
-// to extract courseInstructor
+// Destructuring the course object to extract courseInstructor
 
 
 const {courseInstructor: instructor} = course
 console.log(courseInstructor);
 console.log(instructor);
-// Example of an object structure
-// in JSON format”
+“Example of an object structure in JSON format”
 const exampleJson = [
-{ name: "hitesh", coursename: "js 
-in hindi", price: "free" },
-{ name: "sammy", coursename: "html
-basics", price: "paid" },
-{ name: "john", coursename: "css
-in depth", price: "free" }
+{ name: "hitesh", coursename: "js in hindi", price: "free" },
+{ name: "sammy", coursename: "html basics", price: "paid" },
+{ name: "john", coursename: "css in depth", price: "free" }
 ]
 
 ```
@@ -486,25 +450,21 @@ console.log("S");
 console.log("H");
 }
 sayMyName()
-function addTwoNumbers(number1, 
-number2){
+function addTwoNumbers(number1, number2){
 console.log(number1 + number2);
 }
-function addTwoNumbers(number1, 
-number2){
+function addTwoNumbers(number1, number2){
 let result = number1 + number2
 return result
 return number1 + number2
 }
 const result = addTwoNumbers(3, 5)
 
-console.log("Result: ", result);
+ console.log("Result: ", result);
 
-function loginUserMessage(username
-= "sam"){
+function loginUserMessage(username = "sam"){
 if(!username){
-console.log("PLease enter a 
-username");
+console.log("PLease enter a username");
 return
 }
 return `${username} just logged in`
@@ -512,20 +472,17 @@ return `${username} just logged in`
 console.log(loginUserMessage("hitesh"))
 console.log(loginUserMessage("hitesh"))
 
-function calculateCartPrice(val1, 
-val2, ...num1){
+function calculateCartPrice(val1, val2, ...num1){
 return num1
 }
-console.log(calculateCartPrice(200
-, 400, 500, 2000))
+console.log(calculateCartPrice(200, 400, 500, 2000))
 const user = {
 username: "hitesh",
 prices: 199
 }
 
 function handleObject(anyobject){
-console.log(`Username is 
-${anyobject.username} and price is
+console.log(`Username is ${anyobject.username} and price is
 ${anyobject.price}`);
 }
 handleObject(user)
@@ -538,8 +495,7 @@ function returnSecondValue(getArray){
 return getArray[1]
 }
 console.log(returnSecondValue(myNewArray));
-console.log(returnSecondValue([200
-, 400, 500, 1000]));
+console.log(returnSecondValue([200, 400, 500, 1000]));
 
 ```
 
@@ -601,8 +557,7 @@ const user = {
 username: "hitesh",
 price: 999,
 welcomeMessage: function() {
-console.log(`${this.username} , 
-welcome to website`);
+console.log(`${this.username} , welcome to website`);
 console.log(this);
 }
 }
@@ -631,10 +586,8 @@ return num1 + num2
 }
 const addTwo = (num1, num2) => num1 + num2
 
- const addTwo = (num1, num2) => ( 
-num1 + num2 )
-const addTwo = (num1, num2) => 
-({username: "hitesh"})
+ const addTwo = (num1, num2) => ( num1 + num2 )
+const addTwo = (num1, num2) => ({username: "hitesh"})
 
 console.log(addTwo(3, 4))
 
@@ -675,12 +628,10 @@ const temperature = 41
 if ( temperature === 40 ){
 console.log("less than 50");
 } else {
-console.log("temperature is 
-greater than 50");
+console.log("temperature is greater than 50");
 }
 console.log("Execute");
-
-// “ <, >, <=, >=, ==, !=, ===, !== ”
+“ <, >, <=, >=, ==, !=, ===, !== ”
 const score = 200
 if (score > 100) {
 let power = "fly"
@@ -689,8 +640,7 @@ console.log(`User power: ${power}`);
 
  console.log(`User power: ${power}`);
 const balance = 1000
-if (balance > 500) 
-console.log("test"),console.log("test2");
+if (balance > 500) console.log("test"),console.log("test2");
 if (balance < 500) {
 console.log("less than 500");
 } else if (balance < 750) {
@@ -704,10 +654,8 @@ const userLoggedIn = true
 const debitCard = true
 const loggedInFromGoogle = false
 const loggedInFromEmail = true
-if (userLoggedIn && debitCard && 
-2==3) {
-console.log("Allow to buy 
-course");
+if (userLoggedIn && debitCard && 2==3) {
+console.log("Allow to buy course");
 }
 if (loggedInFromGoogle || loggedInFromEmail) {
 
@@ -751,24 +699,19 @@ console.log("Don't have user email");
 
 // falsy values
 
-// false, 0, -0, BigInt 0n, ""
-// null, undefined, NaN
-
-// “truthy values”
-
+false, 0, -0, BigInt 0n, "", null, undefined, NaN
+“truthy values”
 "0", 'false', " ", [], {}, function(){}
 if (userEmail.length === 0) {
 console.log("Array is empty");
 }
 
  const emptyObj = {}
-if (Object.keys(emptyObj).length 
-=== 0) {
+if (Object.keys(emptyObj).length === 0) {
 console.log("Object is empty");
 }
 
-// Nullish Coalescing Operator 
-// (??): null undefined
+// Nullish Coalescing Operator (??): null undefined
 
 let val1;
 val1 = 5 ?? 10
@@ -781,10 +724,8 @@ Terniary Operator
 condition ? true : false
 const iceTeaPrice = 100
 
- iceTeaPrice <= 80 ? 
- console.log("less than 80") : 
- console.log("more
- than 80")
+ iceTeaPrice <= 80 ? console.log("less than 80") : console.log("more
+than 80")
 
 ```
 
@@ -806,22 +747,19 @@ console.log(element);
 for (let i = 1; i <= 10; i++) {
 console.log(`Outer loop value: ${i}`);
 for (let j = 1; j <= 10; j++) {
-console.log(`Inner loop value ${j}
-and inner loop ${i}`);
+console.log(`Inner loop value ${j} and inner loop ${i}`);
 console.log(i + '*' + j + ' = ' + i*j );
 }
 
  }
-let myArray = ["flash", "batman", 
-"superman"]
+let myArray = ["flash", "batman", "superman"]
 console.log(myArray.length);
-for (let index = 0; index < 
-myArray.length; index++) {
+for (let index = 0; index < myArray.length; index++) {
 const element = myArray[index];
 console.log(element);
 }
 
-// break and continue
+break and continue
 for (let index = 1; index <= 20; index++) {
 if (index == 5) {
 console.log(`Detected 5`);
@@ -846,16 +784,13 @@ console.log(`Value of i is ${index}`);
 
 let index = 0
 while (index <= 10) {
-console.log(`Value of index is 
-${index}`);
+console.log(`Value of index is ${index}`);
 index = index + 2
 }
-let myArray = ['flash', "batman", 
-"superman"]
+let myArray = ['flash', "batman", "superman"]
 let arr = 0
 while (arr < myArray.length) {
-console.log(`Value is 
-${myArray[arr]}`);
+console.log(`Value is ${myArray[arr]}`);
 arr = arr + 1
 }
 let score = 11
@@ -889,7 +824,7 @@ const map = new Map()
 map.set('IN', "India")
 map.set('USA', "United States of America")
 
-map.set('Fr', "France")
+ map.set('Fr', "France")
 map.set('IN', "India")
 
 console.log(map);
@@ -900,8 +835,7 @@ const myObject = {
 game1: 'NFS',
 game2: 'Spiderman'
 }
-for (const [key, value] of 
-myObject) {
+for (const [key, value] of myObject) {
 console.log(key, ':-', value);
 }
 
@@ -920,11 +854,9 @@ cpp: 'C++',
 swift: "swift by apple"
 }
 for (const key in myObject) {
-console.log(`${key} shortcut is 
-for ${myObject[key]}`);
+console.log(`${key} shortcut is for ${myObject[key]}`);
 }
-const programming = ["js", "rb", 
-"py", "java", "cpp"]
+const programming = ["js", "rb", "py", "java", "cpp"]
 for (const key in programming) {
 console.log(programming[key]);
 }
@@ -943,8 +875,7 @@ console.log(key);
 
 ```javascript
 
-const coding = ["js", "ruby", 
-"java", "python", "cpp"]
+const coding = ["js", "ruby", "java", "python", "cpp"]
 coding.forEach( function (val){
 console.log(val);
 })
@@ -956,8 +887,7 @@ console.log(item);
 }
 coding.forEach(printMe)
 
-coding.forEach( (item, index, 
-arr)=> {
+coding.forEach( (item, index, arr)=> {
 console.log(item, index, arr);
 })
 const myCoding = [
@@ -986,10 +916,8 @@ console.log(item.languageName);
 ```javascript
 
 
-const coding = ["js", "ruby", 
-"java", "python", "cpp"]
-const values = coding.forEach( 
-  (item) => {
+const coding = ["js", "ruby", "java", "python", "cpp"]
+const values = coding.forEach( (item) => {
 console.log(item);
 return item
 
@@ -1008,34 +936,23 @@ newNums.push(num)
 console.log(newNums);
 
 const books = [
-{ title: 'Book One', genre: 
-'Fiction', publish: 1981, edition: 2004 },
-{ title: 'Book Two', genre: 
-'Non-Fiction', publish: 1992, edition: 2008
+{ title: 'Book One', genre: 'Fiction', publish: 1981, edition: 2004 },
+{ title: 'Book Two', genre: 'Non-Fiction', publish: 1992, edition: 2008
 },
-{ title: 'Book Three', genre: 
-'History', publish: 1999, edition: 2007 },
+{ title: 'Book Three', genre: 'History', publish: 1999, edition: 2007 },
 
- { title: 'Book Four', genre: 
- 'Non-Fiction', publish: 1989, edition: 2010
+ { title: 'Book Four', genre: 'Non-Fiction', publish: 1989, edition: 2010
 },
-{ title: 'Book Five', genre: 
-'Science', publish: 2009, edition: 2014 },
-{ title: 'Book Six', genre: 
-'Fiction', publish: 1987, edition: 2010 },
-{ title: 'Book Seven', genre: 
-'History', publish: 1986, edition: 1996 },
-{ title: 'Book Eight', genre: 
-'Science', publish: 2011, edition: 2016 },
-{ title: 'Book Nine', genre: 
-'Non-Fiction', publish: 1981, edition: 1989
+{ title: 'Book Five', genre: 'Science', publish: 2009, edition: 2014 },
+{ title: 'Book Six', genre: 'Fiction', publish: 1987, edition: 2010 },
+{ title: 'Book Seven', genre: 'History', publish: 1986, edition: 1996 },
+{ title: 'Book Eight', genre: 'Science', publish: 2011, edition: 2016 },
+{ title: 'Book Nine', genre: 'Non-Fiction', publish: 1981, edition: 1989
 },
 ];
-let userBooks = books.filter( (bk)
-=> bk.genre === 'History')
+let userBooks = books.filter( (bk) => bk.genre === 'History')
 userBooks = books.filter( (bk) => {
-return bk.publish >= 1995 && 
-bk.genre === "History"
+return bk.publish >= 1995 && bk.genre === "History"
 })
 console.log(userBooks);
 
@@ -1045,29 +962,21 @@ console.log(userBooks);
 
 ```javascript
 
-const myNumers = [1, 2, 3, 4, 5, 
-6, 7, 8, 9, 10]
-const newNums = myNumers.map( 
-  (num) => { return num + 10})
+const myNumers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const newNums = myNumers.map( (num) => { return num + 10})
 const newNums = myNumers
-.map((num) => num * 10 )
+
+ .map((num) => num * 10 )
 .map( (num) => num + 1)
 .filter( (num) => num >= 40)
 console.log(newNums);
-```
-### Situation 8
-
-```javascript
+“Situation 8”
 const myNums = [1, 2, 3]
-const myTotal = 
-myNums.reduce(function (acc, 
-currval) {
-console.log(`acc: ${acc} and 
-currval: ${currval}`);
+const myTotal = myNums.reduce(function (acc, currval) {
+console.log(`acc: ${acc} and currval: ${currval}`);
 return acc + currval
 }, 0)
-const myTotal = myNums.reduce( 
-  (acc, curr) => acc+curr, 0)
+const myTotal = myNums.reduce( (acc, curr) => acc+curr, 0)
 console.log(myTotal);
 
 const shoppingCart = [
@@ -1089,8 +998,7 @@ itemName: "data science course",
 price: 12999
 },
 ]
-const priceToPay = 
-shoppingCart.reduce((acc, item) => acc +
+const priceToPay = shoppingCart.reduce((acc, item) => acc +
 item.price, 0)
 console.log(priceToPay);
 
@@ -1101,21 +1009,16 @@ console.log(priceToPay);
 ```javascript
 
 // Saving data to localStorage
-localStorage.setItem('username', 
-'hitesh');
+localStorage.setItem('username', 'hitesh');
 
 // Store a key-value pair
-localStorage.setItem('userEmail', 
-'hitesh@chatgpt.com');
+localStorage.setItem('userEmail', 'hitesh@chatgpt.com');
 
 // Store another key-value pair
 
-// Retrieving data from 
-localStorage
-const username = 
-localStorage.getItem('username');
-const userEmail = 
-localStorage.getItem('userEmail');
+// Retrieving data from localStorage
+const username = localStorage.getItem('username');
+const userEmail = localStorage.getItem('userEmail');
 console.log(username);
 // Output: hitesh
 
@@ -1127,8 +1030,7 @@ console.log(userEmail);
 localStorage.setItem('username', 'sammy');
 
 // Update username
-console.log(localStorage.getItem('
-username'));
+console.log(localStorage.getItem('username'));
 
 // Output: sammy
 
@@ -1141,8 +1043,7 @@ Removes userEmail
 
 localStorage.clear();
 
-// Clears all data stored in 
-// localStorage
+//Clears all data stored in localStorage
 
 ```
 
@@ -1151,20 +1052,16 @@ localStorage.clear();
 ```javascript
 
 // Saving data to sessionStorage
-sessionStorage.setItem('sessionID'
-, '12345');
+sessionStorage.setItem('sessionID', '12345');
 
 // Store a session key-value pair
-sessionStorage.setItem('isLoggedIn
-', 'true');
+sessionStorage.setItem('isLoggedIn', 'true');
 
 // Store another key-value pair
 
 //Retrieving data from sessionStorage
-const sessionID = 
-sessionStorage.getItem('sessionID');
-const isLoggedIn = 
-sessionStorage.getItem('isLoggedIn');
+const sessionID = sessionStorage.getItem('sessionID');
+const isLoggedIn = sessionStorage.getItem('isLoggedIn');
 console.log(sessionID);
 // Output: 12345
 
@@ -1174,13 +1071,11 @@ console.log(isLoggedIn);
 
 // Updating data in sessionStorage
 
-sessionStorage.setItem('isLoggedIn
-', 'false');
+sessionStorage.setItem('isLoggedIn', 'false');
 
 // Update isLoggedIn status
 
-console.log(sessionStorage.getItem
-('isLoggedIn'));
+console.log(sessionStorage.getItem('isLoggedIn'));
 
 //Output: false
 
@@ -1204,26 +1099,20 @@ sessionStorage.clear();
 
 // Select by id Name
 
-const elementById = 
-document.getElementById("elementId");
+const elementById = document.getElementById("elementId");
 
 // Select by class name
 const elementByClass =
 document.getElementsByClassName("elementClass");
 
 // Select by tag name
-const elementByTag = 
-document.getElementsByTagName("div");
+const elementByTag = document.getElementsByTagName("div");
 
-// Select using querySelector 
-// (first matching element)
-const firstElement = 
-document.querySelector(".elementClass");
+// Select using querySelector (first matching element)
+const firstElement = document.querySelector(".elementClass");
 
-// Select using querySelectorAll 
-// (all matching elements)
-const allElements = 
-document.querySelectorAll(".elementClass");
+// Select using querySelectorAll (all matching elements)
+const allElements = document.querySelectorAll(".elementClass");
 
 ```
 
@@ -1232,8 +1121,7 @@ document.querySelectorAll(".elementClass");
 ```javascript
 
 // Create a new div element
-const newDiv = 
-document.createElement("div");
+const newDiv = document.createElement("div");
 
 // Add a class to the new div
 newDiv.classList.add("new-class");
@@ -1242,8 +1130,7 @@ newDiv.classList.add("new-class");
 newDiv.id = "newId";
 
 // Add an attribute to the new div
-newDiv.setAttribute("data-info", 
-"someData");
+newDiv.setAttribute("data-info", "someData");
 
 // Add some inline styles to the new div
 newDiv.style.backgroundColor = "lightblue";
@@ -1251,8 +1138,7 @@ newDiv.style.padding = "10px";
 newDiv.style.fontSize = "20px";
 
 // Add content to the new div
-newDiv.textContent = "This is a 
-new div element.";
+newDiv.textContent = "This is a new div element.";
 
 ```
 
@@ -1261,11 +1147,9 @@ new div element.";
 
 ```javascript
 
-// Select an existing element to 
-// append the new div to (e.g., 
-// body or a specific container)
-const container = 
-document.getElementById("container");
+// Select an existing element to append the new div to (e.g., body or
+a specific container)
+const container = document.getElementById("container");
 
 // Append the new div to the container
 container.appendChild(newDiv);
@@ -1277,17 +1161,13 @@ container.appendChild(newDiv);
 ```javascript 
 
 
-// 1. Select an existing element 
-// (e.g., body or a container)
-const container = 
-document.getElementById("container");
+// 1. Select an existing element (e.g., body or a container)
+const container = document.getElementById("container");
 
 // 2. Create a new div element
-const newDiv = 
-document.createElement("div");
+const newDiv = document.createElement("div");
 
-// 3. Add classes, ID, attributes,
-// and styles to the new div
+// 3. Add classes, ID, attributes, and styles to the new div
 newDiv.classList.add("new-class");
 newDiv.id = "newId";
 newDiv.setAttribute("data-info", "someData");
@@ -1297,11 +1177,9 @@ newDiv.style.padding = "10px";
 newDiv.style.fontSize = "20px";
 
 // 4.. Add content to the new div
-newDiv.textContent = "This is a 
-new div element.";
+newDiv.textContent = "This is a new div element.";
 
-// 5. Append the new div to the 
-// selected container
+// 5. Append the new div to the selected container
 container.appendChild(newDiv);
 
 ```
@@ -1311,76 +1189,51 @@ container.appendChild(newDiv);
 
 ```javascript
 
-// 1. Check if an Element Has a 
-// Specific Class To check if an 
-// element contains a certain 
-// class, use the
+// 1. Check if an Element Has a Specific Class To check if an element contains a certain class, use the
 
 // classList.contains() method:
 
-const element = 
-document.getElementById('myElement');
+const element = document.getElementById('myElement');
 
  if (element.classList.contains('myClass')) {
-console.log('Element has the class
-"myClass".');
+console.log('Element has the class "myClass".');
 } else {
-console.log('Element does not have
-the class "myClass".');
+console.log('Element does not have the class "myClass".');
 }
 
 // 2. Check if an Element Has a Specific ID
 
-// To check if an element has a 
-// specific ID, you can directly 
-// compare the id attribute:
+//To check if an element has a specific ID, you can directly compare the id attribute:
 
-const element = 
-document.getElementById('myElement');
+const element = document.getElementById('myElement');
 if (element.id === 'myElement') {
-console.log('Element has the ID 
-"myElement".');
+console.log('Element has the ID "myElement".');
 } else {
-console.log('Element does not have
-the ID "myElement".');
+console.log('Element does not have the ID "myElement".');
 }
 
-// 3. Check if an Element Has a 
-// Specific Attribute To check if 
-// an element has a specific 
-// attribute, use the 
-// hasAttribute() method:
+// 3. Check if an Element Has a Specific Attribute To check if an element has a specific attribute, use the hasAttribute() method:
 
-const element = 
-document.getElementById('myElement');
-if (element.hasAttribute('data-cus
-tom')) {
+const element = document.getElementById('myElement');
+if (element.hasAttribute('data-custom')) {
 
- console.log('Element has the 
- "data-custom" attribute.');
+ console.log('Element has the "data-custom" attribute.');
 } else {
-console.log('Element does not have
-the "data-custom"
+console.log('Element does not have the "data-custom"
 attribute.');
 }
 
 // 4. Check the Value of a Specific Attribute
 
-//If you want to check the value 
-// of a specific attribute, you 
-// can use the getAttribute() method:
-const element = 
-document.getElementById('myElement'); //
+//If you want to check the value of a specific attribute, you can use the getAttribute() method:
+const element = document.getElementById('myElement'); //
 
-const attributeValue = 
-element.getAttribute('data-custom');
+const attributeValue = element.getAttribute('data-custom');
 if (attributeValue) {
-console.log(`Element has the 
-"data-custom" attribute with
+console.log(`Element has the "data-custom" attribute with
 value: ${attributeValue}`);
 } else {
-console.log('Element does not have
-the "data-custom"
+console.log('Element does not have the "data-custom"
 attribute.');
 }
 
@@ -1389,13 +1242,10 @@ attribute.');
 
 /*
 
-Check for class: 
-classList.contains()
+Check for class: classList.contains()
 Check for ID: element.id === 'ID'
-Check for attribute presence: 
-hasAttribute('attributeName')
-Check attribute value: 
-getAttribute('attributeName')
+Check for attribute presence: hasAttribute('attributeName')
+Check attribute value: getAttribute('attributeName')
 
 */
 
@@ -1418,15 +1268,13 @@ Example:
 
 <div id="parent">
 
-<button id="child">Click me</button>
+  <button id="child">Click me</button>
 </div>
-document.getElementById("child").a
-ddEventListener("click",
+document.getElementById("child").addEventListener("click",
 function(event) {
 alert("Button clicked!");
 });
-document.getElementById("parent").
-addEventListener("click",
+document.getElementById("parent").addEventListener("click",
 function(event) {
 alert("Parent clicked!");
 });
@@ -1443,13 +1291,11 @@ To stop the event from bubbling up, use **event.stopPropagation()** :
 
 ```javascript
 
-document.getElementById("child").a
-ddEventListener("click",
+document.getElementById("child").addEventListener("click",
 function(event) {
 alert("Button clicked!");
 
-event.stopPropagation(); 
-// Prevents the event from reaching the
+ event.stopPropagation(); Prevents the event from reaching the
 parent
 });
 
@@ -1464,8 +1310,7 @@ Example:
 
 ```javascript
 
-document.getElementById("parent").
-addEventListener("click",
+document.getElementById("parent").addEventListener("click",
 function(event) {
 alert("Parent clicked!");
 }, true);
@@ -1504,13 +1349,10 @@ elements.
 <li>Item 3</li>
 
  </ul>
-document.getElementById("list").ad
-dEventListener("click",
+document.getElementById("list").addEventListener("click",
 function(event) {
-if (event.target && 
-event.target.tagName === "LI") {
-alert("Item clicked: " + 
-event.target.textContent);
+if (event.target && event.target.tagName === "LI") {
+alert("Item clicked: " + event.target.textContent);
 }
 });
 
@@ -1523,36 +1365,27 @@ Clicking any **li** item will trigger the event listener on the parent
 
 ```javascript
 
-// Event delegation also works for
-// dynamically added content:
+// Event delegation also works for dynamically added content:
 
 <div id="dynamicContent"></div>
-<button id="addItemButton">Add 
-Item</button>
-document.getElementById("dynamicCo
-ntent").addEventListener("
+<button id="addItemButton">Add Item</button>
+document.getElementById("dynamicContent").addEventListener("
 click", function(event) {
-if (event.target && 
-event.target.matches("button.addItem")) {
+if (event.target && event.target.matches("button.addItem")) {
 alert("Item added");
 }
 
  });
-document.getElementById("addItemBu
-tton").addEventListener("c
+document.getElementById("addItemButton").addEventListener("c
 lick", function() {
-const newItem = 
-document.createElement("button");
+const newItem = document.createElement("button");
 newItem.classList.add("addItem");
 newItem.textContent = "New Item";
-document.getElementById("dynamicCo
-ntent").appendChild(newI
+document.getElementById("dynamicContent").appendChild(newI
 tem);
 });
 
-// The event listener on 
-// #dynamicContent listens for clicks
-// on dynamically added buttons as well.
+// The event listener on #dynamicContent listens for clicks on dynamically added buttons as well.
 
 ```
 
@@ -1616,10 +1449,8 @@ setTimeout(greet, 2000);
 
 
 // Return Value:
-// setTimeout() returns a timer ID
-// that can be used with
-// clearTimeout() to cancel the 
-// execution if needed.
+// setTimeout() returns a timer ID that can be used with
+clearTimeout() to cancel the execution if needed.
 
 ```
 
@@ -1628,18 +1459,14 @@ setTimeout(greet, 2000);
 ```javascript
 
 let timeoutId = setTimeout(() => {
-console.log("This will not 
-execute");
+console.log("This will not execute");
 }, 5000);
 
-// Cancel the timeout before it 
-// executes
+// Cancel the timeout before it executes
 
 // clearTimeout(timeoutId);
-// In the above code, 
-// clearTimeout() cancels the 
-// timeout before the
-// function is executed.
+// In the above code, clearTimeout() cancels the timeout before the
+function is executed.
 
 ```
 
@@ -1667,11 +1494,9 @@ function when it is called.
 ```javascript
 
 function showTime() {
-console.log(new 
-Date().toLocaleTimeString());
+console.log(new Date().toLocaleTimeString());
 }
-let intervalId = 
-setInterval(showTime, 1000);
+let intervalId = setInterval(showTime, 1000);
 
 ```
 
@@ -1709,8 +1534,7 @@ clearTimeout(timeoutId);.
 ```javascript
 
 let intervalId = setInterval(() => {
-console.log("This is running every
-second");
+console.log("This is running every second");
 }, 1000);
 
 setTimeout(() => {
@@ -1728,25 +1552,21 @@ console.log("Interval stopped.");
 
 setTimeout(() => {
 
- console.log("Hello, this is a 
- delayed message!");
+ console.log("Hello, this is a delayed message!");
 }, 3000);
 
-// Message will be shown after 3 
-// seconds
+// Message will be shown after 3 seconds
 
 
-// Example 2: Repeated Task 
-// (Interval)
+// Example 2: Repeated Task (Interval)
 
 let counter = 0;
-let intervalId = setInterval(() =>
-{
+let intervalId = setInterval(() => {
 console.log(`Counter: ${counter}`);
 counter++;
 if (counter === 5) {
 clearInterval(intervalId);
-// Stop after 5 counts
+Stop after 5 counts
 console.log("Interval stopped");
 }
 }, 1000);
@@ -1783,13 +1603,11 @@ console.log("Interval stopped");
 
 
 setTimeout(() => {
-document.getElementById("myElement
-").style.display = "none";
+document.getElementById("myElement").style.display = "none";
 }, 3000);
 let counter = 0;
 setInterval(() => {
-document.getElementById("counterDi
-splay").innerText =
+document.getElementById("counterDisplay").innerText =
 `Count: ${counter}`;
 counter++;
 }, 1000);
@@ -1833,12 +1651,10 @@ XMLHttpRequest is a built-in JavaScript object that allows you to send HTTP requ
 ```javascript
 
 const xhr = new XMLHttpRequest();
-xhr.open('GET', 
-'https://api.example.com/data', true);
+xhr.open('GET', 'https://api.example.com/data', true);
 xhr.onload = function() {
 if (xhr.status === 200) {
-const data = 
-JSON.parse(xhr.responseText);
+const data = JSON.parse(xhr.responseText);
 console.log(data);
 // Handle response data
 } else {
@@ -1892,12 +1708,7 @@ console.log("Step 3");
 }, 1000);
 }, 1000);
 
-// This deeply nested structure 
-// leads to Callback Hell, where 
-// multiple callbacks are needed, 
-// and the code becomes 
-// increasingly difficult to 
-// maintain and debug.
+// This deeply nested structure leads to Callback Hell, where multiple callbacks are needed, and the code becomes increasingly difficult to maintain and debug.
 
 ```
 
@@ -1923,8 +1734,7 @@ callback hell.
 
 ```javascript
 
-const myPromise = new 
-Promise((resolve, reject) => {
+const myPromise = new Promise((resolve, reject) => {
 const success = true;
 if (success) {
 resolve('Operation successful');
@@ -1934,16 +1744,12 @@ reject('Operation failed');
 });
 
 myPromise
-.then(result => console.log(result)) 
-// Success handler
-.catch(error => console.error(error));
-// Error handler
+.then(result => console.log(result)) // Success handler
+.catch(error => console.error(error)); // Error handler
 
 // Chaining Promises:
 
-// Promises can be chained using 
-// .then() to handle successive 
-// asynchronous operations.
+// Promises can be chained using .then() to handle successive asynchronous operations.
 fetch('https://api.example.com/data')
 .then(response => response.json())
 .then(data => {
@@ -1951,10 +1757,7 @@ console.log(data);
 Handle data
 return data;
 })
-.catch(error => 
-console.error('Error:', error)); 
-
-//Handle error
+.catch(error => console.error('Error:', error)); Handle error
 
 ```
 
@@ -1974,23 +1777,17 @@ Async/Await is a more modern way of handling asynchronous code, making it look a
 
 async function fetchData() {
 try {
-const response = await 
-fetch('https://api.example.com/data');
+const response = await fetch('https://api.example.com/data');
 const data = await response.json();
 console.log(data);
 Handle data
 } catch (error) {
-console.error('Error:', error); 
-// Handle error
+console.error('Error:', error); Handle error
 }
 }
 fetchData();
 
-// Async/Await allows you to 
-// handle asynchronous tasks like 
-// they are synchronous, making 
-// your code more readable and
-// easier to debug.
+// Async/Await allows you to handle asynchronous tasks like they are synchronous, making your code more readable and easier to debug.
 
 ```
 
@@ -2009,8 +1806,7 @@ block, and the error is caught and handled in the catch block.
 
 async function fetchData() {
 try {
-const response = await 
-fetch('https://api.example.com/data');
+const response = await fetch('https://api.example.com/data');
 const data = await response.json();
 console.log(data);
 Handle data
@@ -2098,11 +1894,7 @@ console.log(person1.getAge());
 
 // 35
 
-//In the example above, age is 
-// encapsulated within the class 
-// and can only be accessed or 
-// modified through the provided 
-// getter and setter methods.
+//In the example above, age is encapsulated within the class and can only be accessed or modified through the provided getter and setter methods.
 
 ```
 
@@ -2127,12 +1919,10 @@ this.model = model;
 // Public method to start the car
 
  startCar() {
-console.log(`${this.make} 
-${this.model} is now running.`);
+console.log(`${this.make} ${this.model} is now running.`);
 }
 
-// Private method (not directly 
-// accessible outside the class)
+// Private method (not directly accessible outside the class)
 
 _checkEngine() {
 console.log("Checking engine...");
@@ -2143,15 +1933,9 @@ const myCar = new Car("Toyota", "Corolla");
 
 myCar.startCar();
 
-// Abstraction: Only the startCar 
-// method is exposed.
+// Abstraction: Only the startCar method is exposed.
 
-// In this example, the startCar 
-// method abstracts away the 
-// complexity of how the car 
-// actually starts, focusing only 
-// on the behavior, while the 
-// _checkEngine method is hidden.
+// In this example, the startCar method abstracts away the complexity of how the car actually starts, focusing only on the behavior, while the _checkEngine method is hidden.
 
 ```
 
@@ -2184,18 +1968,12 @@ console.log(`${this.name} barks.`);
 }
 
  }
-const dog = new Dog("Max", "Golden
-Retriever");
+const dog = new Dog("Max", "Golden Retriever");
 dog.speak();
 
 // Max barks.
 
-// In this example, the Dog class 
-// inherits from the Animal class
-// meaning that Dog has access to 
-// the speak method, but it can 
-// also override it to implement 
-// specific behavior.
+// In this example, the Dog class inherits from the Animal class, meaning that Dog has access to the speak method, but it can also override it to implement specific behavior.
 
 
 ```
@@ -2240,11 +2018,7 @@ animal2.speak();
 
 // Cat meows
 
-// Here, both Dog and Cat override
-// the speak method, which 
-// demonstrates polymorphism as 
-// each object behaves differently
-// when calling the same method.
+// Here, both Dog and Cat override the speak method, which demonstrates polymorphism as each object behaves differently when calling the same method.
 
 ```
 
@@ -2329,9 +2103,7 @@ person.greet();
 
 console.log(person.#name);
 
-// Error: Private field '#name' 
-// must be declared in an 
-// enclosing class
+// Error: Private field '#name' must be declared in an enclosing class
 
 ```
 
@@ -2358,41 +2130,34 @@ improve code readability and maintenance.
 const user = {
 username: "hitesh",
 
-loginCount: 8,
+ loginCount: 8,
 signedIn: true,
 getUserDetails: function(){
-console.log("Got user details from
-database");
-console.log(`Username: 
-${this.username}`);
+console.log("Got user details from database");
+console.log(`Username: ${this.username}`);
 console.log(this);
 }
 }
 
 console.log(user.username)
-console.log(user.getUserDetails())
-;
+console.log(user.getUserDetails());
 console.log(this);
 
 // Function Constructor
 
 
-function User(username, 
-loginCount, isLoggedIn){
+function User(username, loginCount, isLoggedIn){
 this.username = username;
 this.loginCount = loginCount;
 this.isLoggedIn = isLoggedIn
 this.greeting = function(){
-console.log(`Welcome 
-${this.username}`);
+console.log(`Welcome ${this.username}`);
 
  }
 return this
 }
-const userOne = new User("hitesh",
-12, true)
-const userTwo = new 
-User("ChaiAurCode", 11, false)
+const userOne = new User("hitesh", 12, true)
+const userTwo = new User("ChaiAurCode", 11, false)
 console.log(userOne.constructor);
 console.log(userTwo);
 
@@ -2416,52 +2181,24 @@ function createUser(username, score){
 this.username = username
 this.score = score
 }
-createUser.prototype.increment = 
-function(){
+createUser.prototype.increment = function(){
 this.score++
 }
-createUser.prototype.printMe = 
-function(){
+createUser.prototype.printMe = function(){
 console.log(`price is ${this.score}`);
 }
-const chai = new 
-createUser("chai", 25)
+const chai = new createUser("chai", 25)
 const tea = createUser("tea", 250)
 chai.printMe()
 
 
-// Here's what happens behind the 
-// scenes when the new keyword is used:
+// Here's what happens behind the scenes when the new keyword is used:
 
-// A new object is created: The 
-// new keyword initiates the 
-// creation of a new JavaScript object.
+// A new object is created: The new keyword initiates the creation of a new JavaScript object.
 
-// A prototype is linked: The
-// newly created object gets 
-// linked to the prototype 
-// property of the constructor 
-// function. This means that it 
-// has access to properties and 
-// methods defined on the 
-// constructor's prototype.
+// A prototype is linked: The newly created object gets linked to the prototype property of the constructor function. This means that it has access to properties and methods defined on the constructor's prototype.
 
-// The constructor is called: The 
-// constructor function is called 
-// with the specified arguments 
-// and this is bound to the newly 
-// created object. If no explicit 
-// return value is specified from 
-// the constructor, JavaScript 
-// assumes this, the newly created
-//object, to be the intended 
-// return value. The new object is
-// returned: After the constructor
-// function has been called, if it
-// doesn't return a non-primitive 
-// value (object, array, function,
-// etc.), the newly created object
-//is returned.
+// The constructor is called: The constructor function is called with the specified arguments and this is bound to the newly created object. If no explicit return value is specified from the constructor, JavaScript assumes this, the newly created object, to be the intended return value. The new object is returned: After the constructor function has been called, if it doesn't return a non-primitive value (object, array, function, etc.), the newly created object is returned.
 
 
 
@@ -2485,13 +2222,11 @@ let heroPower = {
 thor: "hammer",
 spiderman: "sling",
 getSpiderPower: function(){
-console.log(`Spidy power is 
-${this.spiderman}`);
+console.log(`Spidy power is ${this.spiderman}`);
   }
 }
 Object.prototype.hitesh = function(){
-console.log(`hitesh is present in 
-all objects`);
+console.log(`hitesh is present in all objects`);
 }
 Array.prototype.heyHitesh = function(){
 console.log(`Hitesh says hello`);
@@ -2500,10 +2235,9 @@ heroPower.hitesh()
 myHeros.hitesh()
 myHeros.heyHitesh()
 heroPower.heyHitesh()
+Inheritance
 
-// Inheritance
-
-const User = {
+ const User = {
 name: "chai",
 email: "chai@google.com"
 }
@@ -2523,16 +2257,13 @@ Teacher.__proto__ = User
 
 // Modern syntax
 
-Object.setPrototypeOf(TeachingSupp
-ort, Teacher)
+Object.setPrototypeOf(TeachingSupport, Teacher)
 let anotherUsername = "ChaiAurCode"
 
 
-String.prototype.trueLength = 
-function(){
+String.prototype.trueLength = function(){
 console.log(`${this}`);
-console.log(`True length is: 
-${this.trim().length}`);
+console.log(`True length is: ${this.trim().length}`);
 }
 anotherUsername.trueLength()
 "hitesh".trueLength()
@@ -2581,9 +2312,7 @@ console.log(`${this.name} greets ${name}`);
  }
 const person = { name: "Alice" };
 
-//Using `call` to set `this` to 
-// `person` object and passing 
-// "Bob" as an argument.
+//Using `call` to set `this` to `person` object and passing "Bob" as an argument.
 
 greet.call(person, "Bob");
 
@@ -2591,21 +2320,18 @@ greet.call(person, "Bob");
 
 
 function SetUsername(username){
-// complex DB calls
+complex DB calls
 this.username = username
 console.log("called");
 }
 
-function createUser(username, 
-email, password){
+function createUser(username, email, password){
 SetUsername.call(this, username)
 this.email = email
 this.password = password
 }
 
-const chai = new 
-createUser("chai", "chai@fb.com", 
-"123")
+const chai = new createUser("chai", "chai@fb.com", "123")
 console.log(chai);
 
 ```
@@ -2637,14 +2363,15 @@ a function.
 
 
 function greet(name, age) {
-console.log(`${this.name} is 
-${age} years old and greets
+console.log(`${this.name} is ${age} years old and greets
 ${name}`);
 }
 const person = { name: "Alice" };
-// Using `apply` to pass arguments
-// as an array
+// Using `apply` to pass arguments as an array
 greet.apply(person, ["Bob", 30]);
+// Output: Alice is 30 years old and
+
+//greets Bob
 
 ```
 
@@ -2678,21 +2405,16 @@ immediately.
 ```javascript
 
 function greet(name) {
-console.log(`${this.name} greets 
-${name}`);
+console.log(`${this.name} greets ${name}`);
 
  }
 const person = { name: "Alice" };
 
-// Using `bind` to create a new 
-// function with `this` set to 
-// `person` object
+// Using `bind` to create a new function with `this` set to `person` object
 
 const greetPerson = greet.bind(person);
 
-// The function is not called yet,
-// but we can now call it with 
-// specific arguments.
+// The function is not called yet, but we can now call it with specific arguments.
 
 greetPerson("Bob");
 
@@ -2702,18 +2424,16 @@ greetPerson("Bob");
 class React {
 constructor(){
 this.library = "React"
-this.server = 
-"https://localhost:300"
+this.server = "https://localhost:300"
 // requirement
 document
 .querySelector('button')
-.addEventListener('click', 
-this.handleClick.bind(this))
+.addEventListener('click', this.handleClick.bind(this))
 }
 handleClick(){
 
  console.log("button clicked");
- console.log(this.server);
+console.log(this.server);
 }
 }
 const app = new React()
@@ -2766,8 +2486,7 @@ code.
 ```javascript
 
 class User {
-constructor(username, email, 
-password){
+constructor(username, email, password){
 this.username = username;
 this.email = email;
 this.password = password
@@ -2777,17 +2496,13 @@ return `${this.password}abc`
 
  }
 changeUsername(){
-return `${this.username.toUpperCas
-e()}`
+return `${this.username.toUpperCase()}`
 }
 }
-const chai = new User("chai", 
-"chai@gmail.com", "123")
+const chai = new User("chai", "chai@gmail.com", "123")
 console.log(chai.encryptPassword());
 console.log(chai.changeUsername());
-
-// Behind the scene
-
+Behind the scene
 function User(username, email, password){
 this.username = username;
 this.email = email;
@@ -2801,8 +2516,7 @@ return `${this.username.toUpperCase()}`
 
  }
 
-const tea = new User("tea", 
-"tea@gmail.com", "123")
+const tea = new User("tea", "tea@gmail.com", "123")
 console.log(tea.encryptPassword());
 console.log(tea.changeUsername());
 
@@ -2820,25 +2534,20 @@ logMe(){
 console.log(`USERNAME is ${this.username}`);
 }
 }
-
 class Teacher extends User{
-constructor(username, email, 
-password){
+constructor(username, email, password){
 super(username)
- this.email = email
+this.email = email
 
  this.password = password
 }
 addCourse(){
-console.log(`A new course was 
-added by ${this.username}`);
+console.log(`A new course was added by ${this.username}`);
 }
 }
-const chai = new Teacher("chai", 
-"chai@teacher.com", "123")
+const chai = new Teacher("chai", "chai@teacher.com", "123")
 chai.logMe()
-const masalaChai = new 
-User("masalaChai")
+const masalaChai = new User("masalaChai")
 masalaChai.logMe()
 console.log(chai instanceof User);
 
@@ -2865,8 +2574,7 @@ this.email = email
 }
 }
 
-const iphone = new 
-Teacher("iphone", "i@phone.com")
+const iphone = new Teacher("iphone", "i@phone.com")
 console.log(iphone.createId());
 
 ```
@@ -2878,8 +2586,7 @@ console.log(iphone.createId());
 
 ```javascript
 
-const descripter = 
-Object.getOwnPropertyDescriptor(Math, "PI")
+const descripter = Object.getOwnPropertyDescriptor(Math, "PI")
 console.log(descripter);
 console.log(Math.PI);
 Math.PI = 5
@@ -2892,17 +2599,14 @@ orderChai: function(){
 console.log("chai nhi bni");
 }
 }
-console.log(Object.getOwnPropertyD
-escriptor(chai, "name"));
+console.log(Object.getOwnPropertyDescriptor(chai, "name"));
 Object.defineProperty(chai, 'name', {
 writable: false,
 enumerable: true,
 })
 
- console.log(Object.getOwnProperty
- Descriptor(chai, "name"));
-for (let [key, value] of 
-Object.entries(chai)) {
+ console.log(Object.getOwnPropertyDescriptor(chai, "name"));
+for (let [key, value] of Object.entries(chai)) {
 if (typeof value !== 'function') {
 console.log(`${key} : ${value}`);
 }
@@ -2935,8 +2639,7 @@ set password(value){
 this._password = value
 }
 }
-const hitesh = new 
-User("h@hitesh.ai", "abc")
+const hitesh = new User("h@hitesh.ai", "abc")
 console.log(hitesh.email);
 
 ```
@@ -2967,8 +2670,7 @@ this._password = value
 }
 })
 }
-const chai = new 
-User("chai@chai.com", "chai")
+const chai = new User("chai@chai.com", "chai")
 console.log(chai.email);
 
 
@@ -3023,10 +2725,8 @@ even if the outer function has finished execution.
 
 ```javascript
 
-function outerFunction(outerVariab
-le) {
-return function 
-innerFunction(innerVariable) {
+function outerFunction(outerVariable) {
+return function innerFunction(innerVariable) {
 
  console.log(outerVariable);
  
@@ -3037,19 +2737,14 @@ innerFunction(innerVariable) {
  
 };
 }
-const closureExample = 
-outerFunction("I am outer");
+const closureExample = outerFunction("I am outer");
 closureExample("I am inner");
 
 // Output:
 // I am outer
 // I am inner
 
-// Explanation: innerFunction has 
-// access to outerVariable, even 
-// though outerFunction has 
-// already executed. This is a 
-// closure in action.
+// Explanation: innerFunction has access to outerVariable, even though outerFunction has already executed. This is a closure in action.
 
 
 function init() {
@@ -3094,17 +2789,14 @@ myFunc();
 
 
 function clickHandler(color){
-document.body.style.backgroundColo
-r = `${color}`
+document.body.style.backgroundColor = `${color}`
 return function(){
 document.body.style.backgroundColor = `${color}`
 }
 }
-document.getElementById('orange').
-onclick =
+document.getElementById('orange').onclick =
 clickHandler("orange")
-document.getElementById('green').o
-nclick =
+document.getElementById('green').onclick =
 clickHandler("green")
 
 
@@ -3131,23 +2823,14 @@ return num * factor;
 };
 }
 const multiplyBy2 = multiplyBy(2);
-console.log(multiplyBy2(5)); 
-//Output: 10
+console.log(multiplyBy2(5)); Output: 10
 const multiplyBy3 = multiplyBy(3);
-console.log(multiplyBy3(5)); 
-//Output: 15
+console.log(multiplyBy3(5)); Output: 15
 
 
-// Explanation: The multiplyBy 
-// function is a higher-order 
-// function because it returns a 
-// new function that multiplies a 
-// number by the specified factor.
+// Explanation: The multiplyBy function is a higher-order function because it returns a new function that multiplies a number by the specified factor.
 
-// Higher-order functions are 
-// commonly used in JavaScript 
-// array methods like map(), 
-// filter(), and reduce().
+// Higher-order functions are commonly used in JavaScript array methods like map(), filter(), and reduce().
 
 ```
 
@@ -3180,23 +2863,13 @@ console.log(response);
 
 });
 
-// Explanation: fetchData takes a 
-// callback function as its 
-// argument and calls it after 
-// getting the data. The callback 
-// function receives the data as a parameter.
+// Explanation: fetchData takes a callback function as its argument and calls it after getting the data. The callback function receives the data as a parameter.
 
 
-// Common Usage of Callback 
-// Functions: Asynchronous 
-// Operations: Callbacks are often
-// used in async operations (e.g.,
-// fetching data from a server).
+// Common Usage of Callback Functions: Asynchronous Operations: Callbacks are often used in async operations (e.g., fetching data from a server).
 
 
-// Event Handlers: In DOM 
-// manipulation, callbacks are 
-// used as event listeners.
+// Event Handlers: In DOM manipulation, callbacks are used as event listeners.
 
 ```
 
@@ -3229,15 +2902,13 @@ Here is an example that involves closures, higher-order functions, and callbacks
 ```javascript
 
 
-function createCounter(initialValu
-e) {
+function createCounter(initialValue) {
 let count = initialValue;
 return function() {
 This is a closure
 count++;
 
-// Accessing the `count` variable 
-// from outer function
+// Accessing the `count` variable from outer function
 return count;
 };
 }
@@ -3248,16 +2919,7 @@ console.log(counter());
 Output: 1
 }, 1000);
 
-// Explanation: createCounter is a
-// higher-order function because 
-// it returns a function (counter)
-// that is a closure. The counter 
-// function accesses count even 
-// after createCounter has 
-// finished execution. The 
-// setTimeout() function takes a 
-// callback, which calls counter()
-// after 1 second.
+// Explanation: createCounter is a higher-order function because it returns a function (counter) that is a closure. The counter function accesses count even after createCounter has finished execution. The setTimeout() function takes a callback, which calls counter() after 1 second.
 
 ```
 
@@ -3291,22 +2953,18 @@ handling user interactions.
 ```javascript
 
 
-const parent = 
-document.querySelector('.parent')
+const parent = document.querySelector('.parent')
 console.log(parent);
 console.log(parent.children);
 
-console.log(parent.children[1].inn
-erHTML);
-for (let i = 0; i < 
-parent.children.length; i++) {
+console.log(parent.children[1].innerHTML);
+for (let i = 0; i < parent.children.length; i++) {
 console.log(parent.children[i].innerHTML);
 }
 parent.children[1].style.color = "orange"
 console.log(parent.firstElementChild);
 console.log(parent.lastElementChild);
-const dayOne = 
-document.querySelector('.day')
+const dayOne = document.querySelector('.day')
 console.log(dayOne);
 console.log(dayOne.parentElement);
 console.log(dayOne.nextElementSibling);
@@ -3319,8 +2977,7 @@ console.log("NODES: ", parent.childNodes);
 ```javascript
 
 
-const div = 
-document.createElement('div')
+const div = document.createElement('div')
 console.log(div);
 div.className = "main"
 div.id = Math.round(Math.random() * 10 + 1)
@@ -3329,8 +2986,7 @@ div.style.backgroundColor = "green"
 div.style.padding = "12px"
 
 div.innerText = "Chai aur code"
-const addText = 
-document.createTextNode("Chai aur code")
+const addText = document.createTextNode("Chai aur code")
 div.appendChild(addText)
 document.body.appendChild(div)
 
@@ -3343,46 +2999,34 @@ document.body.appendChild(div)
 
 
 function addLanguage(langName){
-const li = 
-document.createElement('li');
+const li = document.createElement('li');
 li.innerHTML = `${langName}`
-document.querySelector('.language'
-).appendChild(li)
+document.querySelector('.language').appendChild(li)
 }
 addLanguage("python")
 addLanguage("typescript")
 function addOptiLanguage(langName){
-const li = 
-document.createElement('li');
-li.appendChild(document.createText
-Node(langName))
-document.querySelector('.language'
-).appendChild(li)
+const li = document.createElement('li');
+li.appendChild(document.createTextNode(langName))
+document.querySelector('.language').appendChild(li)
 }
 addOptiLanguage('golang')
 
 // Edit
 
-const secondLang = 
-document.querySelector("li:nth-child(2)")
+const secondLang = document.querySelector("li:nth-child(2)")
 console.log(secondLang);
 secondLang.innerHTML = "Mojo"
-const newli = 
-document.createElement('li')
+const newli = document.createElement('li')
 newli.textContent = "Mojo"
 secondLang.replaceWith(newli)
 
 // edit
 
-const firstLang = 
-document.querySelector("li:first-c
-hild")
-firstLang.outerHTML = 
-'<li>TypeScript</li>'
+const firstLang = document.querySelector("li:first-child")
+firstLang.outerHTML = '<li>TypeScript</li>'
 remove
-const lastLang = 
-document.querySelector('li:last-ch
-ild')
+const lastLang = document.querySelector('li:last-child')
 lastLang.remove()
 
 ```
@@ -3393,10 +3037,8 @@ lastLang.remove()
 
 
 console.log("hitesh")
-const buttons = 
-document.querySelectorAll('.button');
-const body = 
-document.querySelector('body');
+const buttons = document.querySelectorAll('.button');
+const body = document.querySelector('body');
 buttons.forEach(function (button) {
 console.log(button);
 button.addEventListener('click', function (e) {
@@ -3404,20 +3046,16 @@ button.addEventListener('click', function (e) {
  console.log(e);
 console.log(e.target);
 if (e.target.id === 'grey') {
-body.style.backgroundColor = 
-e.target.id;
+body.style.backgroundColor = e.target.id;
 }
 if (e.target.id === 'white') {
-body.style.backgroundColor = 
-e.target.id;
+body.style.backgroundColor = e.target.id;
 }
 if (e.target.id === 'blue') {
-body.style.backgroundColor = 
-e.target.id;
+body.style.backgroundColor = e.target.id;
 }
 if (e.target.id === 'yellow') {
-body.style.backgroundColor = 
-e.target.id;
+body.style.backgroundColor = e.target.id;
 }
 });
 });
@@ -3431,40 +3069,24 @@ e.target.id;
 ```javascript
 
 
-const form = 
-document.querySelector('form');
+const form = document.querySelector('form');
+this usecase will give you empty
 
-// this usecase will give you empty
-
-const height = 
-parseInt(document.querySelector('#
-height').value)
-form.addEventListener('submit', 
-function (e) {
+const height = parseInt(document.querySelector('#height').value)
+form.addEventListener('submit', function (e) {
 e.preventDefault();
-const height = 
-parseInt(document.querySelector('#
-height').value);
+const height = parseInt(document.querySelector('#height').value);
 const weight =
-parseInt(document.querySelector('#
-weight').value);
-
-const results = 
-document.querySelector('#results');
-if (height === '' || height < 0 ||
-isNaN(height)) {
-results.innerHTML = `Please give a
-valid height ${height}`;
-} else if (weight === '' || weight
-< 0 || isNaN(weight)) {
-results.innerHTML = `Please give a
-valid weight ${weight}`;
+parseInt(document.querySelector('#weight').value);
+const results = document.querySelector('#results');
+if (height === '' || height < 0 || isNaN(height)) {
+results.innerHTML = `Please give a valid height ${height}`;
+} else if (weight === '' || weight < 0 || isNaN(weight)) {
+results.innerHTML = `Please give a valid weight ${weight}`;
 } else {
-const bmi = (weight / ((height * 
-height) / 10000)).toFixed(2);
+const bmi = (weight / ((height * height) / 10000)).toFixed(2);
 //show the result
-results.innerHTML = 
-`<span>${bmi}</span>`;
+results.innerHTML = `<span>${bmi}</span>`;
 }
 });
 
@@ -3479,16 +3101,13 @@ results.innerHTML =
 ```javascript
 
 
-const clock = 
-document.getElementById('clock');
+const clock = document.getElementById('clock');
 
-const clock = 
-document.querySelector('#clock')
+const clock = document.querySelector('#clock')
 setInterval(function () {
 let date = new Date();
 console.log(date.toLocaleTimeString());
-clock.innerHTML = 
-date.toLocaleTimeString();
+clock.innerHTML = date.toLocaleTimeString();
 }, 1000);
 
 
@@ -3501,52 +3120,38 @@ date.toLocaleTimeString();
 ```javascript
 
 
-let randomNumber = 
-parseInt(Math.random() * 100 + 1);
-const submit = 
-document.querySelector('#subt');
-const userInput = 
-document.querySelector('#guessField');
-const guessSlot = 
-document.querySelector('.guesses');
-const remaining = 
-document.querySelector('.lastResult');
-const lowOrHi = 
-document.querySelector('.lowOrHi');
-const startOver = 
-document.querySelector('.resultParas');
-const p = 
-document.createElement('p');
+let randomNumber = parseInt(Math.random() * 100 + 1);
+const submit = document.querySelector('#subt');
+const userInput = document.querySelector('#guessField');
+const guessSlot = document.querySelector('.guesses');
+const remaining = document.querySelector('.lastResult');
+const lowOrHi = document.querySelector('.lowOrHi');
+const startOver = document.querySelector('.resultParas');
+const p = document.createElement('p');
 let prevGuess = [];
 let numGuess = 1;
 
 let playGame = true;
 if (playGame) {
-submit.addEventListener('click', 
-function (e) {
+submit.addEventListener('click', function (e) {
 e.preventDefault();
-const guess = 
-parseInt(userInput.value);
+const guess = parseInt(userInput.value);
 console.log(guess);
 validateGuess(guess);
 });
 }
 function validateGuess(guess) {
 if (isNaN(guess)) {
-alert('PLease enter a valid 
-number');
+alert('PLease enter a valid number');
 } else if (guess < 1) {
-alert('PLease enter a number more 
-than 1');
+alert('PLease enter a number more than 1');
 } else if (guess > 100) {
-alert('PLease enter a number less 
-than 100');
+alert('PLease enter a number less than 100');
 } else {
 prevGuess.push(guess);
 if (numGuess === 11) {
 displayGuess(guess);
-displayMessage(`Game Over. Random 
-number was
+displayMessage(`Game Over. Random number was
 ${randomNumber}`);
 endGame();
 
@@ -3558,8 +3163,7 @@ checkGuess(guess);
 }
 function checkGuess(guess) {
 if (guess === randomNumber) {
-displayMessage(`You guessed it 
-right`);
+displayMessage(`You guessed it right`);
 endGame();
 } else if (guess < randomNumber) {
 displayMessage(`Number is TOOO low`);
@@ -3581,19 +3185,15 @@ function endGame() {
 userInput.value = '';
 userInput.setAttribute('disabled', '');
 p.classList.add('button');
-p.innerHTML = `<h2 
-id="newGame">Start new Game</h2>`;
+p.innerHTML = `<h2 id="newGame">Start new Game</h2>`;
 startOver.appendChild(p);
 playGame = false;
 newGame();
 }
 function newGame() {
-const newGameButton = 
-document.querySelector('#newGame');
-newGameButton.addEventListener('cl
-ick', function (e) {
-randomNumber = 
-parseInt(Math.random() * 100 + 1);
+const newGameButton = document.querySelector('#newGame');
+newGameButton.addEventListener('click', function (e) {
+randomNumber = parseInt(Math.random() * 100 + 1);
 prevGuess = [];
 numGuess = 1;
 guessSlot.innerHTML = '';
@@ -3616,8 +3216,7 @@ startOver.removeChild(p);
 ```javascript
 
 
-const insert = 
-document.getElementById('insert');
+const insert = document.getElementById('insert');
 window.addEventListener('keydown', (e) => {
 insert.innerHTML = `
 <div class='color'>
@@ -3651,34 +3250,27 @@ const randomColor = function () {
 const hex = '0123456789ABCDEF';
 let color = '#';
 for (let i = 0; i < 6; i++) {
-color += hex[Math.floor(Math.rando
-m() * 16)];
+color += hex[Math.floor(Math.random() * 16)];
 }
 return color;
 };
 let intervalId;
-const startChangingColor = 
-function () {
+const startChangingColor = function () {
 if (!intervalId) {
-intervalId = 
-setInterval(changeBgColor, 1000);
+intervalId = setInterval(changeBgColor, 1000);
 }
 function changeBgColor() {
-document.body.style.backgroundColo
-r = randomColor();
+document.body.style.backgroundColor = randomColor();
 
  }
 };
-const stopChangingColor = function
-() {
+const stopChangingColor = function () {
 clearInterval(intervalId);
 intervalId = null;
 };
-document.querySelector('#start').a
-ddEventListener('click',
+document.querySelector('#start').addEventListener('click',
 startChangingColor);
-document.querySelector('#stop').ad
-dEventListener('click',
+document.querySelector('#stop').addEventListener('click',
 stopChangingColor);
 
 
@@ -3692,19 +3284,16 @@ stopChangingColor);
 
 const getListDetails = (event) => {
 const listItem = event.target;
-listItem.style.transform = 
-"rotateY(360deg)";
+listItem.style.transform = "rotateY(360deg)";
 => {
-listItem.style.transform = 
-"rotateY(0deg)";
+listItem.style.transform = "rotateY(0deg)";
 }, 500);
 document.getElementById(
 "listValue"
 
 setTimeout(()
 
- ).innerText = `You fav 
- programming language is:
+ ).innerText = `You fav programming language is:
 ${listItem.innerText}`;
 };
 document
@@ -3728,8 +3317,7 @@ console.table([
 {
 Description: "I am the outer one",
 Target: event.target,
-CurrentTarget: 
-event.currentTarget,
+CurrentTarget: event.currentTarget,
 },
 ]);
 };
@@ -3739,7 +3327,7 @@ console.table([
 Description: "I am the Middle one",
 Target: event.target,
 
-CurrentTarget: event.currentTarget,
+ CurrentTarget: event.currentTarget,
 },
 ]);
 };
@@ -3756,38 +3344,25 @@ event.stopPropagation();
 
 // By default is the bubbling phase
 
-document.getElementById("outer").a
-ddEventListener("click",
+document.getElementById("outer").addEventListener("click",
 callOuter);
-document.getElementById("middle").
-addEventListener("click",
+document.getElementById("middle").addEventListener("click",
 callMiddle);
-document.getElementById("inner").a
-ddEventListener("click",
+document.getElementById("inner").addEventListener("click",
 callInner);
 
-// To achieve event capturing, you
-// can use the third parameter of 
-// the addEventListener method, 
-// which specifies whether the 
-// event should be captured during
-// the capturing phase. Setting it
-// to true will activate the 
-// capturing phase.
+// To achieve event capturing, you can use the third parameter of the addEventListener method, which specifies whether the event should be captured during the capturing phase. Setting it to true will activate the capturing phase.
 
 
 document
 .getElementById("outer")
-.addEventListener("click", 
-callOuter, true);
+.addEventListener("click", callOuter, true);
 document
 .getElementById("inner")
-.addEventListener("click", 
-callInner, true);
+.addEventListener("click", callInner, true);
 document
 .getElementById("middle")
-.addEventListener("click", 
-callMiddle, true);
+.addEventListener("click", callMiddle, true);
 
 
 ```
@@ -3798,10 +3373,8 @@ callMiddle, true);
 ```javascript
 
 
-const apiBody = 
-document.querySelector(".api_body");
-const apiUrl = 
-"https://icanhazdadjoke.com/";
+const apiBody = document.querySelector(".api_body");
+const apiUrl = "https://icanhazdadjoke.com/";
 async function fetchData() {
 const res = await fetch(apiUrl, {
 headers: {
@@ -3814,17 +3387,14 @@ console.log(data.joke);
 apiBody.innerHTML = data.joke;
 }
 fetchData();
-document.getElementById("fetchJoke
-").addEventListener("click",
+document.getElementById("fetchJoke").addEventListener("click",
 fetchData);
 
 // With Try Catch
 
 
-const apiBody = 
-document.querySelector(".api_body");
-const apiUrl = 
-"https://icanhazdadjoke.com/";
+const apiBody = document.querySelector(".api_body");
+const apiUrl = "https://icanhazdadjoke.com/";
 async function fetchData() {
 const fetchData = async () => {
 try {
@@ -3834,7 +3404,7 @@ Accept: "application/json",
 },
 });
 
-const data = await res.json();
+ const data = await res.json();
 console.log(data.joke);
 apiBody.innerHTML = data.joke;
 } catch (error) {
@@ -3843,8 +3413,7 @@ console.log(error);
 }
 };
 fetchData();
-document.getElementById("fetchJoke
-").addEventListener("click",
+document.getElementById("fetchJoke").addEventListener("click",
 fetchData);
 
 
@@ -3858,10 +3427,8 @@ fetchData);
 ```javascript
 
 
-const apiBody = 
-document.querySelector(".api_body");
-const apiUrl = 
-"https://icanhazdadjoke.cosm/";
+const apiBody = document.querySelector(".api_body");
+const apiUrl = "https://icanhazdadjoke.cosm/";
 const fetchData = () => {
 fetch(apiUrl, {
 headers: {
@@ -3878,14 +3445,12 @@ console.log(data.joke);
 apiBody.innerHTML = data.joke;
 })
 .catch((error) => {
-apiBody.innerHTML = `Api is not 
-working`;
+apiBody.innerHTML = `Api is not working`;
 console.log("I am sorry");
 });
 };
 fetchData();
-document.getElementById("fetchJoke
-").addEventListener("click",
+document.getElementById("fetchJoke").addEventListener("click",
 fetchData);
 
 
@@ -4092,40 +3657,28 @@ but will be resolved at some point.
 
 ```javascript
 
-let fetchData = new 
-Promise((resolve, reject) => {
+let fetchData = new Promise((resolve, reject) => {
 let success = true;
 if(success) {
-resolve("Data fetched 
-successfully");
+resolve("Data fetched successfully");
 } else {
 reject("Error fetching data");
 }
 });
-fetchData.then(result => 
-console.log(result))
+fetchData.then(result => console.log(result))
 .catch(error => console.log(error));
 
 // Async/Await:
 
-// async/await allows you to write
-// asynchronous code in a 
-// synchronous-looking style.
+// async/await allows you to write asynchronous code in a synchronous-looking style.
 
 async function fetchData() {
-let data = await 
-fetch("https://api.example.com/data");
+let data = await fetch("https://api.example.com/data");
 console.log(data);
 }
 fetchData();
  
-// Behind the scenes: When you use
-// await, JavaScript pauses the 
-// execution of the async function 
-// until the Promise is resolved. 
-// It does not block the call 
-// stack but allows asynchronous 
-// code to execute.
+// Behind the scenes: When you use await, JavaScript pauses the execution of the async function until the Promise is resolved. It does not block the call stack but allows asynchronous code to execute.
 
 ```
 
@@ -4173,10 +3726,7 @@ closureExample();
 
 // "I am from outer scope"
 
-// Here, innerFunction has access 
-// to the outerVar even though 
-// outerFunction has finished 
-// execution, demonstrating the closure.
+// Here, innerFunction has access to the outerVar even though outerFunction has finished execution, demonstrating the closure.
 
 
 ```
