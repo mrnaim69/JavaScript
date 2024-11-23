@@ -158,3 +158,6 @@ console.log(objectNaim);
 console.log(objectNaim.fullName)
 console.log(objectNaim.intro());
 
+
+
+
